@@ -83,8 +83,18 @@ export function Etapa1() {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-medium text-gray-900">Nombre del complejo y ubicación</p>
-                <p className="text-sm text-gray-600">Nombre oficial y dirección completa de tu hotel</p>
+                <p className="font-medium text-gray-900">Ubicación del complejo</p>
+                <p className="text-sm text-gray-600">Dirección completa de tu hotel junto con el mapa</p>
+
+                {showPopup && (
+                  <div className="absolute z-50 mt-2 p-2 bg-white border-2 border-gray-300 rounded-lg shadow-2xl">
+                    <img 
+                      src="https://drive.google.com/uc?export=view&id=1HsRNPMTVsRnRPb6eYcsy1ZZ1nvpPTi68" 
+                      alt="Ejemplo de ubicación"
+                      className="max-w-md w-full h-auto rounded"
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
